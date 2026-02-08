@@ -23,7 +23,7 @@ export const HeroSection = () => {
         </video>
         
         {/* Cinematic Mist: Sfumatura profonda per isolare il testo a sinistra */}
-        <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#E7E5E3] via-[#E7E5E3]/95 lg:to-[#E7E5E3]/10" />
+        <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#E7E5E3] via-[#E7E5E3]/95 to-transparent lg:to-[#E7E5E3]/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#E7E5E3]/30 via-transparent to-[#E7E5E3]/40" />
       </div>
 
