@@ -31,7 +31,7 @@ export const ProblemSection = () => {
         </div>
 
         {/* Main Statement */}
-        <h2 className="text-[#0D453D] fluid-heading-2 font-serif leading-[1.2] lg:leading-[1.15] tracking-tight mb-10 lg:mb-12 uppercase max-w-4xl mx-auto">
+        <h2 className="text-[#0D453D] text-[clamp(1.45rem,5vw,3.5rem)] font-serif leading-[1.2] lg:leading-[1.15] tracking-tight mb-10 lg:mb-12 uppercase max-w-4xl mx-auto break-words">
           {t('title')}
         </h2>
 

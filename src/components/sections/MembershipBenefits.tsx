@@ -11,7 +11,7 @@ export const MembershipBenefits = () => {
     <section className="relative overflow-hidden bg-white">
       
       {/* PART 1: Hero Section with Video Background & Glassmorphism Card */}
-      <div className="relative min-h-screen flex items-center section-padding">
+      <div className="relative min-h-[auto] lg:min-h-screen flex items-center section-padding">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
@@ -26,30 +26,30 @@ export const MembershipBenefits = () => {
         </div>
 
         <div className="relative z-10 container-wide w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-24 items-center">
             
             {/* Left: Titles */}
             <div className="lg:col-span-6">
-              <span className="inline-block px-4 py-1.5 bg-[#BEB1A3]/20 border border-[#BEB1A3]/30 backdrop-blur-md text-[#BEB1A3] text-[10px] font-bold tracking-[0.4em] uppercase mb-8">
+              <span className="inline-block px-3 lg:px-4 py-1.5 bg-[#BEB1A3]/20 border border-[#BEB1A3]/30 backdrop-blur-md text-[#BEB1A3] text-[10px] font-bold tracking-[0.3em] lg:tracking-[0.4em] uppercase mb-6 lg:mb-8">
                 Exclusive Membership
               </span>
               <h2 className="text-white mb-4">
-                <span className="block fluid-heading-2 font-serif leading-[1.1] tracking-tight uppercase opacity-80">
+                <span className="block text-[clamp(1.5rem,5vw,3.5rem)] font-serif leading-[1.1] tracking-tight uppercase opacity-80">
                   {t('title_1')}
                 </span>
-                <span className="block fluid-heading-1 font-serif leading-[1] tracking-tight uppercase font-semibold">
+                <span className="block text-[clamp(2rem,7vw,5.5rem)] font-serif leading-[1] tracking-tight uppercase font-semibold">
                   {t('title_2')}
                 </span>
               </h2>
-              <p className="text-[#BEB1A3] text-lg lg:text-xl font-sans font-bold uppercase tracking-[0.2em] mb-12 opacity-90">
+              <p className="text-[#BEB1A3] text-sm lg:text-xl font-sans font-bold uppercase tracking-[0.15em] lg:tracking-[0.2em] mb-8 lg:mb-12 opacity-90">
                 {t('subtitle')}
               </p>
               
-              <div className="flex flex-wrap gap-6">
-                 <button className="bg-white text-[#0D453D] px-12 py-5 text-[12px] font-bold tracking-[0.3em] uppercase hover:bg-[#BEB1A3] hover:text-white transition-all shadow-2xl">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 lg:gap-6">
+                 <button className="bg-white text-[#0D453D] px-8 lg:px-12 py-4 lg:py-5 text-[11px] lg:text-[12px] font-bold tracking-[0.3em] uppercase hover:bg-[#BEB1A3] hover:text-white transition-all shadow-2xl">
                     {t('cta_1')}
                  </button>
-                 <div className="flex items-center gap-4 text-white/40">
+                 <div className="hidden sm:flex items-center gap-4 text-white/40">
                     <div className="h-px w-12 bg-white/20" />
                     <span className="text-[10px] font-bold uppercase tracking-widest">Scroll for Details</span>
                  </div>
@@ -58,20 +58,20 @@ export const MembershipBenefits = () => {
 
             {/* Right: Solid Premium Card for Benefits */}
             <div className="lg:col-span-6">
-              <div className="bg-[#0D453D] border border-white/10 p-8 lg:p-12 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] relative">
+              <div className="bg-[#0D453D] border border-white/10 p-6 md:p-8 lg:p-12 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] relative">
                 {/* Decorative corner */}
-                <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-[#BEB1A3]/30" />
+                <div className="absolute top-0 right-0 w-12 h-12 lg:w-16 lg:h-16 border-t border-r border-[#BEB1A3]/30" />
                 
-                <div className="space-y-10">
+                <div className="space-y-6 lg:space-y-10">
                   {[
                     { text: t('benefit_1'), icon: 'solar:globus-bold' },
                     { text: t('benefit_2'), icon: 'solar:videocamera-record-bold' },
                     { text: t('benefit_3'), icon: 'solar:crown-bold' },
                     { text: t('benefit_4'), icon: 'solar:shop-2-bold' }
                   ].map((benefit, i) => (
-                    <div key={i} className="flex gap-6 group">
-                      <div className="h-10 w-10 flex-shrink-0 border border-white/10 bg-white/5 flex items-center justify-center group-hover:bg-[#BEB1A3]/20 transition-all duration-500">
-                         <Icon icon={benefit.icon} className="text-xl text-[#BEB1A3]" />
+                    <div key={i} className="flex gap-4 lg:gap-6 group">
+                      <div className="h-9 w-9 lg:h-10 lg:w-10 flex-shrink-0 border border-white/10 bg-white/5 flex items-center justify-center group-hover:bg-[#BEB1A3]/20 transition-all duration-500">
+                         <Icon icon={benefit.icon} className="text-lg lg:text-xl text-[#BEB1A3]" />
                       </div>
                       <p className="text-white/90 text-sm lg:text-base leading-relaxed font-sans font-medium">
                         {benefit.text}
@@ -79,8 +79,8 @@ export const MembershipBenefits = () => {
                     </div>
                   ))}
                   
-                  <div className="pt-8 border-t border-white/10">
-                    <p className="text-white/90 text-[15px] lg:text-[17px] leading-relaxed font-sans font-medium italic">
+                  <div className="pt-6 lg:pt-8 border-t border-white/10">
+                    <p className="text-white/90 text-sm lg:text-[17px] leading-relaxed font-sans font-medium italic">
                       {t('benefit_5')}
                     </p>
                   </div>
@@ -103,64 +103,64 @@ export const MembershipBenefits = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12">
               
               {/* Value Side (Left) */}
-              <div className="lg:col-span-7 p-10 lg:p-20 text-white flex flex-col justify-center">
-                <div className="flex items-center gap-3 mb-10 opacity-40">
+              <div className="lg:col-span-7 px-6 py-10 md:p-10 lg:p-20 text-white flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-6 lg:mb-10 opacity-40">
                   <div className="h-1.5 w-1.5 rounded-full bg-[#BEB1A3]" />
                   <span className="text-[10px] font-bold tracking-[0.4em] uppercase">Professional Support</span>
                 </div>
                 
-                <h3 className="fluid-heading-2 font-serif uppercase leading-tight mb-12 tracking-tight">
+                <h3 className="text-[clamp(1.5rem,5vw,3.5rem)] font-serif uppercase leading-tight mb-8 lg:mb-12 tracking-tight">
                   {t('pricing_title')}
                 </h3>
                 
-                <div className="flex items-start gap-8 mb-16 border-l border-white/10 pl-8">
-                  <Icon icon="solar:shield-check-bold" className="text-4xl text-[#BEB1A3] flex-shrink-0" />
-                  <p className="text-white/60 text-base lg:text-lg leading-relaxed font-sans font-medium italic">
+                <div className="flex items-start gap-4 lg:gap-8 mb-10 lg:mb-16 border-l border-white/10 pl-4 lg:pl-8">
+                  <Icon icon="solar:shield-check-bold" className="text-2xl lg:text-4xl text-[#BEB1A3] flex-shrink-0 mt-0.5" />
+                  <p className="text-white/60 text-sm lg:text-lg leading-relaxed font-sans font-medium italic">
                     {t('support')}
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-12 pt-12 border-t border-white/10">
-                  <div className="flex flex-col gap-2">
+                <div className="flex flex-wrap gap-6 lg:gap-12 pt-8 lg:pt-12 border-t border-white/10">
+                  <div className="flex flex-col gap-1.5">
                     <span className="text-[10px] font-bold tracking-[0.3em] text-[#BEB1A3] uppercase">Status</span>
-                    <span className="text-xl font-serif uppercase tracking-widest">All Inclusive</span>
+                    <span className="text-base lg:text-xl font-serif uppercase tracking-widest">All Inclusive</span>
                   </div>
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-1.5">
                     <span className="text-[10px] font-bold tracking-[0.3em] text-[#BEB1A3] uppercase">Network</span>
-                    <span className="text-xl font-serif uppercase tracking-widest">Global Hub</span>
+                    <span className="text-base lg:text-xl font-serif uppercase tracking-widest">Global Hub</span>
                   </div>
                 </div>
               </div>
 
               {/* Pricing/Action Side (Right) */}
-              <div className="lg:col-span-5 bg-white p-10 lg:p-20 flex flex-col justify-center border-l border-[#0D453D]/5">
-                <div className="space-y-10 mb-16">
+              <div className="lg:col-span-5 bg-white px-6 py-10 md:p-10 lg:p-20 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-[#0D453D]/5">
+                <div className="space-y-8 lg:space-y-10 mb-10 lg:mb-16">
                    <div className="relative">
-                      <div className="flex items-center gap-3 mb-4">
+                      <div className="flex items-center gap-3 mb-3 lg:mb-4">
                          <div className="h-2 w-2 rounded-full bg-[#0A4D46]" />
                          <span className="text-[11px] font-bold text-[#0D453D] uppercase tracking-widest">Premium Tiers</span>
                       </div>
-                      <p className="text-[#0D453D]/70 text-base lg:text-lg leading-relaxed font-sans font-medium">
+                      <p className="text-[#0D453D]/70 text-sm lg:text-lg leading-relaxed font-sans font-medium">
                         {t('pricing_1')}
                       </p>
                    </div>
                    
                    <div className="relative">
-                      <div className="flex items-center gap-3 mb-4">
+                      <div className="flex items-center gap-3 mb-3 lg:mb-4">
                          <div className="h-2 w-2 rounded-full border border-[#0A4D46] bg-transparent" />
                          <span className="text-[11px] font-bold text-[#0D453D]/50 uppercase tracking-widest">Entry Tiers</span>
                       </div>
-                      <p className="text-[#0D453D]/60 text-base lg:text-lg leading-relaxed font-sans font-medium">
+                      <p className="text-[#0D453D]/60 text-sm lg:text-lg leading-relaxed font-sans font-medium">
                         {t('pricing_2')}
                       </p>
                    </div>
                 </div>
 
-                <button className="w-full bg-[#0D453D] text-white py-6 text-[12px] font-bold tracking-[0.4em] uppercase hover:bg-[#BEB1A3] transition-all shadow-xl">
+                <button className="w-full bg-[#0D453D] text-white py-5 lg:py-6 text-[11px] lg:text-[12px] font-bold tracking-[0.3em] lg:tracking-[0.4em] uppercase hover:bg-[#BEB1A3] transition-all shadow-xl">
                   {t('cta_2')}
                 </button>
                 
-                <p className="mt-8 text-center text-[10px] font-bold text-[#0D453D]/30 uppercase tracking-[0.2em]">
+                <p className="mt-6 lg:mt-8 text-center text-[10px] font-bold text-[#0D453D]/30 uppercase tracking-[0.2em]">
                   Limited availability for early bird members
                 </p>
               </div>
