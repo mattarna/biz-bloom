@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { useTranslations } from 'next-intl';
 
@@ -7,7 +5,7 @@ export const ProblemSection = () => {
   const t = useTranslations('Problem');
 
   return (
-    <section className="relative section-padding overflow-hidden bg-[#FFFFFF]">
+    <section className="relative section-padding overflow-hidden bg-white">
       
       {/* Subtle Blueprint Grid */}
       <div 
@@ -25,27 +23,27 @@ export const ProblemSection = () => {
         
         {/* Number/Badge */}
         <div className="flex justify-center mb-10 lg:mb-16">
-          <span className="text-[10px] font-bold tracking-[0.5em] text-[#0A4D46]/40 uppercase font-sans">
+          <span className="text-[10px] font-bold tracking-[0.5em] text-brand-primary/40 uppercase font-sans">
             {t('badge')}
           </span>
         </div>
 
         {/* Main Statement */}
-        <h2 className="text-[#0D453D] text-[clamp(1.45rem,5vw,3.5rem)] font-serif leading-[1.2] lg:leading-[1.15] tracking-tight mb-10 lg:mb-12 uppercase max-w-4xl mx-auto break-words">
+        <h2 className="text-brand-dark text-[clamp(1.45rem,5vw,3.5rem)] font-serif leading-[1.2] lg:leading-[1.15] tracking-tight mb-10 lg:mb-12 uppercase max-w-4xl mx-auto break-words">
           {t('title')}
         </h2>
 
         {/* Triple Point Statement */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 lg:gap-12">
-          <p className="text-[clamp(1.1rem,2.5vw,1.6rem)] font-serif italic text-[#0D453D]/40 tracking-tight">
+          <p className="text-[clamp(1.1rem,2.5vw,1.6rem)] font-serif italic text-brand-dark/40 tracking-tight">
             {t('subtitle_1')}
           </p>
-          <div className="hidden md:block h-1.5 w-1.5 rounded-full bg-[#0A4D46]/20" />
-          <p className="text-[clamp(1.1rem,2.5vw,1.6rem)] font-serif italic text-[#0D453D]/40 tracking-tight">
+          <div className="hidden md:block h-1.5 w-1.5 rounded-full bg-brand-primary/20" />
+          <p className="text-[clamp(1.1rem,2.5vw,1.6rem)] font-serif italic text-brand-dark/40 tracking-tight">
             {t('subtitle_2')}
           </p>
-          <div className="hidden md:block h-1.5 w-1.5 rounded-full bg-[#0A4D46]/20" />
-          <p className="text-[clamp(1.1rem,2.5vw,1.6rem)] font-serif italic text-[#0D453D]/40 tracking-tight">
+          <div className="hidden md:block h-1.5 w-1.5 rounded-full bg-brand-primary/20" />
+          <p className="text-[clamp(1.1rem,2.5vw,1.6rem)] font-serif italic text-brand-dark/40 tracking-tight">
             {t('subtitle_3')}
           </p>
         </div>

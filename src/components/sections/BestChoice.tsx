@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -45,6 +43,7 @@ export const BestChoice = () => {
                 src="/media/Community (1).webp"
                 alt="Biz Bloom - La scelta migliore"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D453D]/20 to-transparent" />

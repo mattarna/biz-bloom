@@ -1,8 +1,6 @@
-'use client';
-
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { Icon } from '@iconify/react';
+import { Icon } from '@/components/ui/Icon';
 import Image from 'next/image';
 
 export const CommunitySection = () => {
@@ -27,6 +25,7 @@ export const CommunitySection = () => {
                   src="/media/Community (1).webp" 
                   alt="Biz Bloom Community" 
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 hover:scale-105"
                   priority
                 />

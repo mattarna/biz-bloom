@@ -1,8 +1,6 @@
-'use client';
-
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { Icon } from '@iconify/react';
+import { Icon } from '@/components/ui/Icon';
 
 export const EarlyBirdSection = () => {
   const t = useTranslations('EarlyBird');

@@ -1,7 +1,5 @@
-'use client';
-
 import React from 'react';
-import { Icon } from '@iconify/react';
+import { Icon } from '@/components/ui/Icon';
 import { useTranslations } from 'next-intl';
 
 export const ParlourHero = () => {
