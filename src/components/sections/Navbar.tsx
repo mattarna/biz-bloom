@@ -25,7 +25,7 @@ export const Navbar = () => {
     }
   }, [isMenuOpen]);
 
-  // Close menu on pathname change
+  // Close menu on pathname change (redundant but safe for direct URL changes)
   useEffect(() => {
     setIsMenuOpen(false);
   }, [pathname]);
@@ -105,10 +105,10 @@ export const Navbar = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className={`fixed inset-0 z-[90] lg:hidden ${isBlueRoom ? 'bg-[#0A1628]' : 'bg-[#0D453D]'}`}
           >
             <div className="h-full flex flex-col pt-28 px-6 pb-8 overflow-y-auto">
@@ -119,10 +119,12 @@ export const Navbar = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 + index * 0.05 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <Link
                       href={link.href}
-                      className={`text-3xl sm:text-4xl font-serif uppercase tracking-tight transition-all block ${
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`text-3xl sm:text-4xl font-serif uppercase tracking-tight transition-all block py-2 active:text-white/100 ${
                         pathname === link.href ? 'text-white' : 'text-white/40'
                       }`}
                     >
@@ -138,9 +140,12 @@ export const Navbar = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                <button className="w-full bg-white text-[#0D453D] py-5 text-[13px] font-extrabold tracking-[0.2em] uppercase mb-8 shadow-xl">
+                <motion.button 
+                  whileTap={{ scale: 0.98, backgroundColor: "#f3f4f6" }}
+                  className="w-full bg-white text-[#0D453D] py-5 text-[13px] font-extrabold tracking-[0.2em] uppercase mb-8 shadow-xl active:bg-gray-100 transition-colors"
+                >
                   Area Riservata
-                </button>
+                </motion.button>
                 <div className="flex items-center justify-between text-white/40 border-t border-white/10 pt-6">
                   <span className="text-[9px] font-bold tracking-widest uppercase">Singapore Strategic Hub</span>
                   <div className="flex gap-6">

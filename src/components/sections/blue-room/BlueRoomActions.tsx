@@ -28,8 +28,8 @@ const actionCards: ActionCard[] = [
     descKey: 'action_community_desc',
     ctaKey: 'action_community_cta',
     icon: 'solar:users-group-two-rounded-bold',
-    href: CIRCLE_SO_URL,
-    isExternal: true,
+    href: '#',
+    isExternal: false,
     image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop',
     featured: true,
   },
@@ -49,8 +49,8 @@ const actionCards: ActionCard[] = [
     descKey: 'action_idea_desc',
     ctaKey: 'action_idea_cta',
     icon: 'solar:lightbulb-bolt-bold',
-    href: CIRCLE_SO_URL,
-    isExternal: true,
+    href: '#',
+    isExternal: false,
     image: 'https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=800&auto=format&fit=crop',
   },
   {
@@ -59,8 +59,8 @@ const actionCards: ActionCard[] = [
     descKey: 'action_event_desc',
     ctaKey: 'action_event_cta',
     icon: 'solar:calendar-bold',
-    href: CIRCLE_SO_URL,
-    isExternal: true,
+    href: '#',
+    isExternal: false,
     image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop',
   },
   {
@@ -218,11 +218,8 @@ export const BlueRoomActions = () => {
             />
           </Link>
 
-          <a
-            href={CIRCLE_SO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center gap-4 border border-blueroom-gold/30 px-10 py-5 hover:border-blueroom-gold transition-all duration-500"
+          <div
+            className="group flex items-center gap-4 border border-blueroom-gold/30 px-10 py-5 hover:border-blueroom-gold transition-all duration-500 cursor-default"
           >
             <span className="text-[12px] font-bold tracking-[0.2em] text-blueroom-gold uppercase font-sans">
               Accedi alla Community
@@ -231,7 +228,7 @@ export const BlueRoomActions = () => {
               icon="solar:users-group-rounded-bold"
               className="text-blueroom-gold text-lg group-hover:translate-x-1 transition-transform duration-300"
             />
-          </a>
+          </div>
         </motion.div>
       </div>
     </section>
