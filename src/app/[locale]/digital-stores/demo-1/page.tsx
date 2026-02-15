@@ -37,7 +37,7 @@ export default function Demo1Page() {
       {/* 1. HERO AZIENDALE */}
       <section className="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden bg-[#2C351D]">
         <div className="absolute inset-0 opacity-50">
-           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center" />
+           <div className="absolute inset-0 bg-[url('/media/image-pages/image-digitalstores%20(3).webp')] bg-cover bg-center" />
            <div className="absolute inset-0 bg-gradient-to-b from-[#2C351D] via-transparent to-[#2C351D]" />
         </div>
         

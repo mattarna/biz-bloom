@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Icon } from '@iconify/react';
+import { Icon } from '@/components/ui/Icon';
 import { useTranslations } from 'next-intl';
 
 export const DigitalStoreWhy = () => {
@@ -41,7 +41,7 @@ export const DigitalStoreWhy = () => {
 
           <div className="relative aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl">
             <div 
-              className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center"
+              className="absolute inset-0 bg-[url('/media/image-pages/image-digitalstores%20(1).webp')] bg-cover bg-center"
             />
             <div className="absolute inset-0 bg-brand-dark/10" />
           </div>
@@ -53,7 +53,7 @@ export const DigitalStoreWhy = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
           <div className="relative aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl order-2 lg:order-1">
             <div 
-              className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center"
+              className="absolute inset-0 bg-[url('/media/image-pages/image-digitalstores%20(4).webp')] bg-cover bg-center"
             />
             <div className="absolute inset-0 bg-brand-dark/10" />
           </div>

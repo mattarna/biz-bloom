@@ -1,19 +1,19 @@
 'use client';
 
 import React from 'react';
-import { Icon } from '@iconify/react';
+import { Icon } from '@/components/ui/Icon';
 import { useTranslations } from 'next-intl';
 
 export const DigitalStoreIncludes = () => {
   const t = useTranslations('DigitalStorePage');
 
   const items = [
-    { key: 'include_1', icon: 'solar:home-2-bold' },
-    { key: 'include_2', icon: 'solar:users-group-rounded-bold' },
+    { key: 'include_1', icon: 'solar:shop-2-bold' },
+    { key: 'include_2', icon: 'solar:users-group-two-rounded-bold' },
     { key: 'include_3', icon: 'solar:box-bold' },
-    { key: 'include_4', icon: 'solar:file-download-bold' },
-    { key: 'include_5', icon: 'solar:verified-check-bold' },
-    { key: 'include_6', icon: 'solar:cursor-square-bold' },
+    { key: 'include_4', icon: 'solar:document-download-bold' },
+    { key: 'include_5', icon: 'solar:shield-check-bold' },
+    { key: 'include_6', icon: 'solar:mouse-circle-bold' },
     { key: 'include_7', icon: 'solar:phone-bold' },
   ];
 
@@ -60,7 +60,7 @@ export const DigitalStoreIncludes = () => {
           
           {/* Decorative CTA card for 8th slot */}
           <div className="group p-10 bg-brand-primary flex flex-col items-center justify-center text-center gap-6 rounded-[30px] shadow-xl shadow-brand-primary/10">
-            <Icon icon="solar:globus-bold" className="text-5xl text-white/20 animate-spin-slow" />
+            <Icon icon="solar:globus-bold" className="text-5xl text-white/40 animate-spin-slow" />
             <p className="text-white text-lg font-serif italic">
               "Pensato per l'internazionalizzazione"
             </p>

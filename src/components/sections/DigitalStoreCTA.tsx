@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Icon } from '@iconify/react';
+import { Icon } from '@/components/ui/Icon';
 import { useTranslations } from 'next-intl';
 import { Input } from '@/components/ui/Input';
 import { PhoneInput } from '@/components/ui/PhoneInput';

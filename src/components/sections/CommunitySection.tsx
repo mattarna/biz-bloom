@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Icon } from '@/components/ui/Icon';
@@ -22,7 +24,7 @@ export const CommunitySection = () => {
               {/* Image representing community */}
               <div className="absolute inset-0 overflow-hidden rounded-sm shadow-2xl">
                 <Image 
-                  src="/media/Community (1).webp" 
+                  src="/media/image-pages/vibrante-community.webp" 
                   alt="Biz Bloom Community" 
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

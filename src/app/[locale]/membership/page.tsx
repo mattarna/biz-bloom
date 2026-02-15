@@ -1,13 +1,10 @@
+'use client';
+
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import { InternalHero } from '@/components/sections/InternalHero';
 import { Icon } from '@/components/ui/Icon';
 import Image from 'next/image';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Membership | Biz Bloom",
-  description: "Entra nella nostra community internazionale. Scegli tra i piani Silver, Gold e Platinum per accelerare la tua espansione globale.",
-};
 
 export default function MembershipPage() {
   const t = useTranslations('MembershipPage');
@@ -18,6 +15,7 @@ export default function MembershipPage() {
       name: t('silver_name'),
       price: t('silver_price'),
       period: t('silver_period'),
+      intro: t('silver_intro'),
       features: [
         { title: t('silver_feature_1_title'), desc: t('silver_feature_1_desc') },
         { title: t('silver_feature_2_title'), desc: t('silver_feature_2_desc') },
@@ -57,29 +55,15 @@ export default function MembershipPage() {
   ];
 
   return (
-    <main className="bg-brand-alabaster pt-20">
+    <main className="bg-brand-alabaster">
       
-      {/* INTERNAL HERO */}
-      <section className="relative h-[45vh] min-h-[400px] flex items-center bg-brand-dark overflow-hidden">
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute inset-0 bg-[url('/media/noise.png')] opacity-20" />
-          <div className="h-full w-full bg-gradient-to-br from-white/20 to-transparent" />
-        </div>
-        
-        <div className="relative z-10 container-wide w-full text-center">
-          <div className="flex justify-center items-center gap-4 mb-8 opacity-40">
-             <div className="h-px w-8 bg-brand-beige" />
-             <span className="text-[10px] font-bold tracking-[0.4em] text-brand-beige uppercase">Biz Bloom Project</span>
-             <div className="h-px w-8 bg-brand-beige" />
-          </div>
-          <h1 className="text-white fluid-heading-1 font-serif leading-none tracking-tight uppercase mb-6">
-            {t('hero_title')}
-          </h1>
-          <p className="text-brand-beige text-lg lg:text-xl font-sans font-medium uppercase tracking-[0.2em] opacity-80">
-            {t('hero_subtitle')}
-          </p>
-        </div>
-      </section>
+      <InternalHero 
+        variant="premium"
+        badge="Biz Bloom Project"
+        title={t('hero_title')}
+        subtitle={t('hero_subtitle')}
+        imageSrc="/media/image-pages/image-membership (1).webp"
+      />
 
       {/* EARLY BIRD INTRO */}
       <section className="section-padding border-b border-brand-dark/5">
@@ -106,10 +90,7 @@ export default function MembershipPage() {
                 <p className="text-brand-primary text-sm lg:text-base font-sans font-extrabold uppercase tracking-wider mb-8">
                   {t('early_bird_warning')}
                 </p>
-                <div className="pt-8 border-t border-brand-beige/20 flex flex-col sm:flex-row items-center justify-between gap-8">
-                   <p className="text-brand-dark/60 text-sm font-sans font-medium max-w-xs">
-                     {t('early_bird_cta')}
-                   </p>
+                <div className="pt-8 border-t border-brand-beige/20 flex flex-col sm:flex-row items-center justify-end gap-8">
                    <button className="bg-brand-dark text-white px-10 py-5 text-[11px] font-bold tracking-[0.3em] uppercase hover:bg-brand-beige transition-all shadow-xl whitespace-nowrap">
                      {t('early_bird_button')}
                    </button>
@@ -121,7 +102,7 @@ export default function MembershipPage() {
             <div className="lg:col-span-5">
               <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-2xl group">
                 <Image 
-                  src="/media/Community (1).webp"
+                  src="/media/image-pages/image-membership (2).webp"
                   alt="Biz Bloom Community Access"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"

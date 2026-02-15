@@ -1,3 +1,5 @@
+'use client';
+
 import { HeroSection } from '@/components/sections/HeroSection';
 import { ProblemSection } from '@/components/sections/ProblemSection';
 import { ProjectSection } from '@/components/sections/ProjectSection';
@@ -12,12 +14,6 @@ import { MembershipBenefits } from '@/components/sections/MembershipBenefits';
 import { AdditionalFeatures } from '@/components/sections/AdditionalFeatures';
 import { useTranslations } from 'next-intl';
 import { Icon } from '@/components/ui/Icon';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Biz Bloom | Internazionalizzazione Digitale per PMI",
-  description: "Una piattaforma rivoluzionaria per l'impresa che vuole aprire nuovi mercati esteri con successo. Internazionalizzazione digitale integrata.",
-};
 
 export default function Index() {
   const tf = useTranslations('Footer');
@@ -41,11 +37,11 @@ export default function Index() {
       {/* MISSION QUOTE */}
       <section className="pt-8 lg:pt-12 pb-20 lg:pb-32 bg-brand-alabaster">
         <div className="mx-auto max-w-4xl px-8 text-center">
-          <div className="flex justify-center items-center gap-6 mb-8 lg:mb-12 opacity-20">
-             <div className="h-[1px] w-8 lg:w-12 bg-brand-dark" />
-             <Icon icon="solar:globus-bold" className="text-xl lg:text-2xl text-brand-dark" />
-             <div className="h-[1px] w-8 lg:w-12 bg-brand-dark" />
-          </div>
+              <div className="flex justify-center items-center gap-6 mb-8 lg:mb-12 opacity-20">
+                 <div className="h-[1px] w-8 lg:w-12 bg-brand-dark" />
+                 <Icon icon="solar:globus-bold" className="text-xl lg:text-2xl text-brand-dark" />
+                 <div className="h-[1px] w-8 lg:w-12 bg-brand-dark" />
+              </div>
           <blockquote className="text-brand-dark text-[clamp(1.25rem,4vw,2.2rem)] font-serif font-bold leading-[1.4] uppercase tracking-tight italic">
             "{tf('mission')}"
           </blockquote>

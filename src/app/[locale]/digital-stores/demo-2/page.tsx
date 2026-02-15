@@ -37,7 +37,7 @@ export default function Demo2Page() {
       {/* 1. HERO AZIENDALE */}
       <section className="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden bg-[#0F172A]">
         <div className="absolute inset-0 opacity-30">
-           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558239027-5197828d1844?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center" />
+           <div className="absolute inset-0 bg-[url('/media/image-pages/image-digitalstores%20(2).webp')] bg-cover bg-center" />
         </div>
         
         <div className="relative z-10 max-w-5xl space-y-12">
@@ -69,7 +69,7 @@ export default function Demo2Page() {
               </p>
             </div>
             <div className="aspect-video bg-[#F1F5F9] rounded-[40px] overflow-hidden">
-               <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center opacity-80" />
+               <div className="w-full h-full bg-[url('/media/image-pages/image-digitalstores%20(2).webp')] bg-cover bg-center opacity-80" />
             </div>
           </div>
         </div>

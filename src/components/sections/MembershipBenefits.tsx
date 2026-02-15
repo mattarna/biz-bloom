@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Icon } from '@/components/ui/Icon';
@@ -16,7 +18,7 @@ export const MembershipBenefits = () => {
             autoPlay muted loop playsInline
             className="w-full h-full object-cover grayscale brightness-[0.2]"
           >
-            <source src="/media/BIZ BLOOM SINGAPORE V3.mp4" type="video/mp4" />
+            <source src="/media/video-home-bizbloom.mp4" type="video/mp4" />
           </video>
           {/* Subtle patterns/overlays */}
           <div className="absolute inset-0 bg-brand-dark/60 backdrop-blur-[2px]" />
@@ -111,11 +113,16 @@ export const MembershipBenefits = () => {
                   {t('pricing_title')}
                 </h3>
                 
-                <div className="flex items-start gap-4 lg:gap-8 mb-10 lg:mb-16 border-l border-white/10 pl-4 lg:pl-8">
-                  <Icon icon="solar:shield-check-bold" className="text-2xl lg:text-4xl text-brand-beige flex-shrink-0 mt-0.5" />
-                  <p className="text-white/60 text-sm lg:text-lg leading-relaxed font-sans font-medium italic">
-                    {t('support')}
-                  </p>
+                <div className="flex items-start gap-4 lg:gap-8 mb-10 lg:mb-16 border-l-2 border-brand-beige pl-4 lg:pl-8 bg-white/5 py-6 pr-6">
+                  <Icon icon="solar:shield-user-bold" className="text-3xl lg:text-5xl text-brand-beige flex-shrink-0" />
+                  <div>
+                    <p className="text-white text-sm lg:text-xl leading-relaxed font-sans font-semibold mb-2">
+                      Sessione Operativa Dedicata
+                    </p>
+                    <p className="text-white/70 text-sm lg:text-lg leading-relaxed font-sans font-medium italic">
+                      {t('support')}
+                    </p>
+                  </div>
                 </div>
 
                 <div className="flex flex-wrap gap-6 lg:gap-12 pt-8 lg:pt-12 border-t border-white/10">

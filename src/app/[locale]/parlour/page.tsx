@@ -1,7 +1,9 @@
 import React from 'react';
 import { ParlourHero } from '@/components/sections/ParlourHero';
 import { ParlourServices } from '@/components/sections/ParlourServices';
-import { ParlourHowItWorks } from '@/components/sections/ParlourHowItWorks';
+import { ParlourStrategic } from '@/components/sections/ParlourStrategic';
+import { ParlourAccess } from '@/components/sections/ParlourAccess';
+import { ParlourIntegration } from '@/components/sections/ParlourIntegration';
 import { ParlourContact } from '@/components/sections/ParlourContact';
 import { Metadata } from 'next';
 
@@ -15,7 +17,9 @@ export default function ParlourPage() {
     <main className="min-h-screen">
       <ParlourHero />
       <ParlourServices />
-      <ParlourHowItWorks />
+      <ParlourStrategic />
+      <ParlourAccess />
+      <ParlourIntegration />
       <ParlourContact />
     </main>
   );

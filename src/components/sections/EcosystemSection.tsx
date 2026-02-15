@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Icon } from '@/components/ui/Icon';
@@ -56,7 +58,7 @@ export const EcosystemSection = () => {
                 {item.title}
               </h3>
               
-              <p className="text-[14px] lg:text-[15px] text-brand-dark/50 leading-relaxed font-sans font-medium max-w-[280px]">
+              <p className="text-[16px] lg:text-[18px] text-brand-dark/50 leading-relaxed font-sans font-medium max-w-[320px]">
                 {item.desc}
               </p>
 

@@ -109,7 +109,7 @@ export const BrainyBoxForm = () => {
   const totalSteps = 5;
 
   return (
-    <section id="brainy-box-form" className="relative section-padding bg-background">
+    <section id="brainy-box-form" className="relative pt-12 pb-24 lg:pt-16 lg:pb-32 bg-background">
       {/* Decorative Grid Background for high-tech feel */}
       <div className="absolute inset-0 bg-blueprint opacity-[0.03] pointer-events-none" />
 

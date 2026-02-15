@@ -8,11 +8,11 @@ export const B2BRoomMarkets = () => {
   const t = useTranslations('B2BRoom');
 
   const markets = [
-    { name: 'Dubai / UAE', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop' },
-    { name: 'Saudi Arabia', image: 'https://images.unsplash.com/photo-1590073242678-70ee3fc28e84?q=80&w=2070&auto=format&fit=crop' },
-    { name: 'Kuwait', image: 'https://images.unsplash.com/photo-1518391846015-55a9cb000b21?q=80&w=2070&auto=format&fit=crop' },
-    { name: 'Singapore', image: 'https://images.unsplash.com/photo-1525625232747-0ef45f85a271?q=80&w=2070&auto=format&fit=crop' },
-    { name: 'Hungary', image: 'https://images.unsplash.com/photo-1512288094938-363287817259?q=80&w=2070&auto=format&fit=crop' },
+    { name: 'Dubai / UAE', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1000' },
+    { name: 'Saudi Arabia', image: '/media/image-pages/saudi arabia.webp' },
+    { name: 'Kuwait', image: '/media/image-pages/Kuwait.webp' },
+    { name: 'Singapore', image: '/media/image-pages/singapore.webp' },
+    { name: 'Hungary', image: '/media/image-pages/ungheria.webp' },
   ];
 
   return (
@@ -39,7 +39,7 @@ export const B2BRoomMarkets = () => {
                 src={market.image}
                 alt={market.name}
                 fill
-                className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                className="object-cover group-hover:scale-110 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
               <div className="absolute bottom-6 left-6 right-6">

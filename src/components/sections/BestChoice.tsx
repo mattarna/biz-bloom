@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -40,7 +42,7 @@ export const BestChoice = () => {
           <div className="relative group">
             <div className="aspect-[4/5] relative overflow-hidden shadow-2xl">
               <Image
-                src="/media/Community (1).webp"
+                src="/media/image-pages/biz-bloom-image (1).webp"
                 alt="Biz Bloom - La scelta migliore"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

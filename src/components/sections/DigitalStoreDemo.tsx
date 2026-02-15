@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Icon } from '@iconify/react';
+import { Icon } from '@/components/ui/Icon';
 import { useTranslations } from 'next-intl';
 import { DemoModal } from '@/components/ui/DemoModal';
 
@@ -13,12 +13,12 @@ export const DigitalStoreDemo = () => {
     { 
       id: '1', 
       key: 'demo_1', 
-      image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&q=80&w=1000' 
+      image: '/media/image-pages/image-digitalstores (3).webp' 
     },
     { 
       id: '2', 
       key: 'demo_2', 
-      image: 'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&q=80&w=1000' 
+      image: '/media/image-pages/image-digitalstores (2).webp' 
     },
   ];
 

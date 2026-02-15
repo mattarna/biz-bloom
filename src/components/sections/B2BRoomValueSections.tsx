@@ -10,19 +10,19 @@ export const B2BRoomValueSections = () => {
 
   const sections = [
     {
-      id: 'missions',
-      badge: 'La Tua Missione',
-      title: 'Digitali o in presenza',
-      description: 'Che tu scelga la flessibilità del digitale o l\'impatto della presenza fisica, ti garantiamo un percorso lineare e strutturato per il tuo successo internazionale.',
-      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop',
+      id: 'different',
+      badge: t('value_different_badge'),
+      title: t('value_different_title'),
+      description: t('value_different_desc'),
+      image: '/media/image-pages/b2b-room (1).webp',
       reversed: false
     },
     {
-      id: 'premium',
-      badge: 'Posizionamento Premium',
-      title: 'L\'opzione contatti garantiti',
-      description: 'Per chi non ammette incertezze: la nostra opzione premium ti assicura incontri qualificati con decision maker pre-validati nei mercati target.',
-      image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070&auto=format&fit=crop',
+      id: 'dedicated',
+      badge: t('value_dedicated_badge'),
+      title: t('value_dedicated_title'),
+      description: t('value_dedicated_desc'),
+      image: '/media/image-pages/b2b-room (2).webp',
       reversed: true
     }
   ];
@@ -61,7 +61,7 @@ export const B2BRoomValueSections = () => {
                   src={section.image}
                   alt={section.title}
                   fill
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                  className="object-cover transition-all duration-700 scale-105 group-hover:scale-100"
                 />
                 <div className="absolute inset-0 bg-brand-dark/10 mix-blend-multiply" />
               </div>
