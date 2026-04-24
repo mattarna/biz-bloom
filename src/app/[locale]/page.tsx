@@ -1,7 +1,7 @@
 'use client';
 
 import { HeroSection } from '@/components/sections/HeroSection';
-import { ProblemSection } from '@/components/sections/ProblemSection';
+import { VideoShowcase } from '@/components/sections/VideoShowcase';
 import { ProjectSection } from '@/components/sections/ProjectSection';
 import { SingaporeProjectSection } from '@/components/sections/SingaporeProjectSection';
 import { CommunitySection } from '@/components/sections/CommunitySection';
@@ -21,7 +21,7 @@ export default function Index() {
   return (
     <main className="bg-brand-alabaster">
       <HeroSection />
-      <ProblemSection />
+      <VideoShowcase />
       <ProjectSection />
       <SingaporeProjectSection />
       <CommunitySection />

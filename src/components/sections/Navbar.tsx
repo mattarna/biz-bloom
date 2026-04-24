@@ -50,7 +50,7 @@ export const Navbar = () => {
       }`}>
         <div className="container-wide flex items-center justify-between py-3 lg:py-4">
           <Link href="/" className="flex items-center">
-            <div className="relative h-10 lg:h-11 w-40 lg:w-48">
+            <div className="relative h-12 lg:h-14 w-48 lg:w-60">
               <Image
                 src="/media/di-francia-logo-web.webp"
                 alt="Studio Legale Di Francia"
@@ -62,17 +62,17 @@ export const Navbar = () => {
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden items-center gap-12 lg:flex">
+          <div className="hidden items-center lg:gap-5 xl:gap-8 2xl:gap-12 lg:flex">
             {navLinks.map((link) => {
               const isActive = pathname === link.href || (link.href !== '/' && pathname.includes(link.href));
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-[13px] font-bold tracking-[0.15em] uppercase transition-all ${
+                  className={`text-[12px] xl:text-[13px] font-bold tracking-[0.12em] xl:tracking-[0.15em] uppercase whitespace-nowrap transition-all ${
                     isBlueRoom
-                      ? `hover:text-[#C9A96E] ${isActive ? 'text-[#C9A96E] tracking-[0.2em]' : 'text-[#F5F0E8]/50'}`
-                      : `hover:text-[#0A4D46] ${isActive ? 'text-[#0A4D46] tracking-[0.2em]' : 'text-[#0D453D]/70'}`
+                      ? `hover:text-[#C9A96E] ${isActive ? 'text-[#C9A96E] xl:tracking-[0.2em]' : 'text-[#F5F0E8]/50'}`
+                      : `hover:text-[#0A4D46] ${isActive ? 'text-[#0A4D46] xl:tracking-[0.2em]' : 'text-[#0D453D]/70'}`
                   }`}
                 >
                   {link.name}

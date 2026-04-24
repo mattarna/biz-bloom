@@ -8,26 +8,43 @@ export const HeroSection = () => {
   const t = useTranslations('Hero');
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-brand-alabaster flex flex-col">
+    <section className="relative min-h-screen lg:h-[115vh] w-full overflow-hidden bg-brand-alabaster flex flex-col">
 
-      {/* GRIGLIA PRINCIPALE */}
-      <div className="relative z-10 container-wide flex-1 flex flex-col justify-center pt-32 lg:pt-36 pb-12 lg:pb-16">
+      {/* 1. LAYER VIDEO - Trattato per massima pulizia */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover"
+        >
+          <source src="/media/BIZ BLOOM SINGAPORE V3.mp4" type="video/mp4" />
+        </video>
+
+        {/* Cinematic Mist: Sfumatura profonda per isolare il testo a sinistra */}
+        <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-brand-alabaster via-brand-alabaster/95 lg:to-brand-alabaster/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-alabaster/30 via-transparent to-brand-alabaster/40" />
+      </div>
+
+      {/* 2. GRIGLIA PRINCIPALE (Massima larghezza per eliminare l'aria ai lati) */}
+      <div className="relative z-10 container-wide flex-1 flex flex-col justify-center pt-24 lg:pt-32 pb-40 lg:pb-80">
 
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
-          {/* SINISTRA: Contenuto */}
+          {/* SINISTRA: Contenuto Razor-Sharp con Copy da Site Map */}
           <div className="w-full lg:col-span-7 flex flex-col justify-center">
 
-            {/* Badge "Biz Bloom Singapore" — ingrandito e dominante */}
-            <div className="flex items-center gap-5 lg:gap-6 mb-5 lg:mb-6">
-              <div className="h-[2px] w-10 lg:w-14 bg-brand-primary" />
-              <span className="text-[18px] lg:text-[24px] font-bold tracking-[0.15em] text-brand-primary uppercase font-sans leading-none">
+            {/* Minimal Tagline */}
+            <div className="flex items-center gap-4 mb-8 lg:mb-12">
+              <div className="h-[1px] w-8 lg:w-10 bg-brand-primary" />
+              <span className="text-[10px] lg:text-[11px] font-bold tracking-[0.4em] text-brand-primary uppercase font-sans">
                 {t('badge')}
               </span>
             </div>
 
-            {/* Headline */}
-            <h1 className="text-brand-dark mb-5 lg:mb-6 leading-[1.1] lg:leading-[1.05] tracking-tight font-serif">
+            {/* Headline: Fedele alla Site Map */}
+            <h1 className="text-brand-dark mb-6 lg:mb-8 leading-[1.1] lg:leading-[1.05] tracking-tight font-serif">
               <span className="block fluid-heading-1 font-medium">
                 {t('title_1')}
               </span>
@@ -36,24 +53,13 @@ export const HeroSection = () => {
               </span>
             </h1>
 
-            {/* Description — 4 paragrafi compatti */}
-            <div className="max-w-3xl mb-6 lg:mb-8 space-y-2 lg:space-y-3">
-              <p className="text-[17px] lg:text-[20px] font-medium text-brand-dark/70 leading-snug font-sans">
-                {t('description_1')}
-              </p>
-              <p className="text-[17px] lg:text-[20px] font-medium text-brand-dark/70 leading-snug font-sans">
-                {t('description_2')}
-              </p>
-              <p className="text-[17px] lg:text-[20px] font-medium text-brand-dark/70 leading-snug font-sans">
-                {t('description_3')}
-              </p>
-              <p className="text-[17px] lg:text-[20px] font-medium text-brand-dark/70 leading-snug font-sans">
-                {t('description_4')}
-              </p>
-            </div>
+            {/* Paragrafo: Aria e Leggibilità - Integrato con copy Site Map */}
+            <p className="text-[18px] lg:text-[22px] font-medium text-brand-dark/60 leading-relaxed max-w-2xl mb-10 lg:mb-16 font-sans">
+              {t('description')}
+            </p>
 
-            {/* CTA Group */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 lg:gap-12 mb-6 lg:mb-8">
+            {/* CTA Group: Allineati e leggibili */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 lg:gap-12 mb-12 lg:mb-16">
               <button className="group bg-brand-dark text-brand-alabaster px-10 lg:px-16 py-5 lg:py-6 text-[13px] lg:text-[14px] font-bold tracking-[0.2em] uppercase hover:bg-brand-primary transition-all flex items-center justify-center gap-5 shadow-xl shadow-brand-dark/10 font-sans">
                 {t('cta_primary')}
                 <Icon icon="solar:arrow-right-linear" className="text-2xl transition-transform group-hover:translate-x-2" />
@@ -84,13 +90,13 @@ export const HeroSection = () => {
 
           </div>
 
-          {/* DESTRA: Quote card — opaca e leggibile */}
+          {/* DESTRA: The Glass Pillar (Raffinato e Leggibile) */}
           <div className="w-full lg:col-span-5 flex flex-col justify-center items-center lg:items-end pb-12 lg:pb-0">
 
-            <div className="w-full max-w-[480px] lg:translate-x-20 bg-white/85 backdrop-blur-sm border border-brand-primary/15 p-8 lg:p-16 flex flex-col gap-8 lg:gap-10 shadow-[0_40px_80px_-15px_rgba(10,77,70,0.15)] relative overflow-hidden">
+            <div className="w-full max-w-[480px] lg:translate-x-20 bg-white/10 backdrop-blur-[40px] border border-white/20 p-8 lg:p-16 flex flex-col gap-8 lg:gap-10 shadow-[0_40px_80px_-15px_rgba(10,77,70,0.15)] relative overflow-hidden">
 
               {/* Block 1: Location */}
-              <div className="border-b border-brand-primary/10 pb-6 lg:pb-8">
+              <div className="border-b border-white/10 pb-6 lg:pb-8">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-[10px] lg:text-[11px] font-bold tracking-[0.3em] text-brand-dark/40 uppercase font-sans">{t('sidebar_hub')}</span>
                   <div className="h-1.5 w-1.5 rounded-full bg-brand-primary animate-pulse" />
@@ -99,9 +105,9 @@ export const HeroSection = () => {
                 <p className="text-[9px] lg:text-[10px] font-mono tracking-widest text-brand-dark/50 mt-4 uppercase">1.3521° N, 103.8198° E</p>
               </div>
 
-              {/* Block 2: Founder Quote */}
+              {/* Block 2: Founder Quote (Copy Missione da Site Map) */}
               <div className="relative">
-                <Icon icon="solar:quote-left-bold" className="absolute -top-4 lg:-top-6 -left-4 lg:-left-6 text-3xl lg:text-4xl text-brand-primary/15" />
+                <Icon icon="solar:quote-left-bold" className="absolute -top-4 lg:-top-6 -left-4 lg:-left-6 text-3xl lg:text-4xl text-brand-primary/10" />
                 <p className="text-[16px] lg:text-[18px] text-brand-dark leading-relaxed font-serif italic">
                   "{t('sidebar_quote')}"
                 </p>
@@ -120,8 +126,8 @@ export const HeroSection = () => {
 
         </div>
 
-        {/* FOOTER HERO */}
-        <div className="h-14 lg:h-16 border-t border-brand-primary/10 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 font-sans py-4 sm:py-0 mt-auto">
+        {/* 3. FOOTER HERO - Pulizia Finale */}
+        <div className="h-20 lg:h-24 border-t border-brand-primary/10 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 font-sans py-4 sm:py-0 mt-auto">
 
           <div className="flex items-center gap-4 lg:gap-6">
              <div className="h-2 w-2 rounded-full bg-brand-primary animate-pulse" />
